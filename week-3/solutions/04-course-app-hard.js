@@ -50,7 +50,9 @@ const authenticateJwt = (req, res, next) => {
 
 // Connect to MongoDB
 // DONT MISUSE THIS THANKYOU!!
-mongoose.connect('mongodb+srv://kirattechnologies:iRbi4XRDdM7JMMkl@cluster0.e95bnsi.mongodb.net/courses', { useNewUrlParser: true, useUnifiedTopology: true, dbName: "courses" });
+const uri = "mongodb+srv://yoursureshnaik:GvEXlL9xC9Uuwh3J@cluster-0.afxvgvg.mongodb.net/cluster-0?retryWrites=true&w=majority&appName=Cluster-0";
+const uri2="mongodb://yoursureshnaik:GvEXlL9xC9Uuwh3J@ac-sri36gn-shard-00-00.afxvgvg.mongodb.net:27017,ac-sri36gn-shard-00-01.afxvgvg.mongodb.net:27017,ac-sri36gn-shard-00-02.afxvgvg.mongodb.net:27017/?replicaSet=atlas-1pesyh-shard-0&ssl=true&authSource=admin"
+mongoose.connect(uri2, { useNewUrlParser: true, useUnifiedTopology: true, dbName: "courses" });
 
 app.post('/admin/signup', (req, res) => {
   const { username, password } = req.body;
