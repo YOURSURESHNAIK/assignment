@@ -51,7 +51,7 @@ const authenticateJwt = (req, res, next) => {
 // Connect to MongoDB
 // DONT MISUSE THIS THANKYOU!!
 const uri = "mongodb+srv://yoursureshnaik:GvEXlL9xC9Uuwh3J@cluster-0.afxvgvg.mongodb.net/cluster-0?retryWrites=true&w=majority&appName=Cluster-0";
-const uri2="mongodb://yoursureshnaik:GvEXlL9xC9Uuwh3J@ac-sri36gn-shard-00-00.afxvgvg.mongodb.net:27017,ac-sri36gn-shard-00-01.afxvgvg.mongodb.net:27017,ac-sri36gn-shard-00-02.afxvgvg.mongodb.net:27017/?replicaSet=atlas-1pesyh-shard-0&ssl=true&authSource=admin/courses"
+const uri2="mongodb://yoursureshnaik:MongoDB@ac-sri36gn-shard-00-00.afxvgvg.mongodb.net:27017,ac-sri36gn-shard-00-01.afxvgvg.mongodb.net:27017,ac-sri36gn-shard-00-02.afxvgvg.mongodb.net:27017/?replicaSet=atlas-1pesyh-shard-0&ssl=true&authSource=admin"
 mongoose.connect(uri2, { useNewUrlParser: true, useUnifiedTopology: true, dbName: "courses" });
 
 
